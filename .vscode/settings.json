@@ -1,0 +1,29 @@
+{
+	"restructuredtext.confPath": "${workspaceFolder}\\source",
+	"restructuredtext.builtDocumentationPath": "${workspaceFolder}\\build\\html",
+	"spellright.language": [
+		"en"
+	],
+	"spellright.documentTypes": [
+		"markdown",
+		"latex",
+		"plaintext",
+		"restructuredtext"
+	],
+	"spellright.ignoreRegExpsByClass": {
+		"restructuredtext":[
+			"/\\.\\. [A-Za-z-]+::/",
+			"/:[A-Za-z-]+:/",
+		],
+	},
+	"[restructuredtext]": {
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 3,
+		"editor.unusualLineTerminators": "auto",
+		"files.encoding": "utf8bom",
+		"files.eol": "\n",
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+	},
+}
