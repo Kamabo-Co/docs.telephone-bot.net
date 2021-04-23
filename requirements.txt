@@ -1,0 +1,5 @@
+pygments ~= 2.8
+sphinx ~= 3.4
+sphinxcontrib-httpdomain ~= 1.7
+sphinxemoji ~= 0.1
+sphinx-rtd-theme ~= 0.5
