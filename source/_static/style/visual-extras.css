@@ -1,0 +1,19 @@
+/** visual-extras.css
+ *	Extra visual-only style touches.
+ *
+ *	IMPORTANT: DO NOT USE THESE RULES TO EXPLICITLY PROVIDE SEMANTICS.
+ *
+ *	Semantic information MUST be provided within the HTML itself using the
+ *	appropriate corresponding elements and attributes. CSS-based semantic
+ *	details should be defined in either `semantics.css` or
+ *	`auditory-semantics.css`, depending upon the purpose of the semantic
+ *	properties being defined.
+ */
+
+/*	"Lead" paragraph(s) container.
+	Used on `/index` to visually reweigh the lead against the admonitions. */
+
+div.container.lead>p {
+	font-size: 160%;
+	line-height: 160%;
+}

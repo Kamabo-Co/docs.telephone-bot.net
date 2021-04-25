@@ -25,7 +25,8 @@ html_theme_options = {
 	'display_version': False,
 }
 html_css_files=[
-	#
+	("style/visual-extras.css", {'type':"text/css",'media':"screen, print"}),
+	("style/visual-tweaks.css", {'type':"text/css",'media':"screen, print"}),
 ]
 
 highlight_language = 'markdown'

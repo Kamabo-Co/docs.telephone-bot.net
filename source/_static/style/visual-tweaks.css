@@ -1,0 +1,87 @@
+/** visual-tweaks.css
+ *	Tweaks that override parts of the themes' visual style.
+ *
+ *	Note: For creating new, non-semantic visual elements, use the
+ *	visual-extras.css` stylesheet.
+ */
+
+/*	Code/keyboard input elements in navigation elements.
+	Eliminates the visual distinction of these elements in the already
+	constrained navigation items. */
+div[role="navigation"] code,
+div[role="navigation"] kbd {
+	padding: unset;
+	font: inherit;
+	color: inherit;
+	background: unset;
+}
+
+/*	Code/keyboard input elements in content headers.
+	Eliminates the majority of the visual distinction of the code element,
+	which prove to be somewhat visually distracting within the header
+	context. Unlike with code/kbd elements in navigation items, the
+	(presumably) monospace font-family property value is left untouched. */
+.rst-content h1>code.literal,.rst-content h1>kbd,
+.rst-content h2>code.literal,.rst-content h2>kbd,
+.rst-content h3>code.literal,.rst-content h3>kbd,
+.rst-content h4>code.literal,.rst-content h4>kbd,
+.rst-content h5>code.literal,.rst-content h5>kbd,
+.rst-content h6>code.literal,.rst-content h6>kbd{
+	font-size: inherit;
+	border: none;
+	color: inherit;
+	background:unset;
+}
+
+/*	Sidebars.
+	Cut the excessive vertical padding in half. */
+.rst-content .sidebar{
+	padding-bottom: 12px;
+}
+.rst-content .sidebar>p.sidebar-title{
+	margin-bottom: 12px;
+}
+
+/*	Descriptive lists immedately within sidebars.
+	Switch to a more-compact grid format, and fix up sizing and alignment. */
+.rst-content .sidebar>dl{
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+.rst-content .sidebar>dl>dt,
+.rst-content .sidebar>dl>dd{
+	margin: 0;
+	font-size: inherit;
+	line-height: inherit;
+}
+.rst-content .sidebar>dl>dt{
+	padding-right: 1ex;
+}
+.rst-content .sidebar>dl>dd>*{
+	line-height: inherit;
+	font-size: inherit;
+}
+.rst-content .sidebar>dl>dd>*:last-child{
+	margin-bottom: 0.5ex;
+}
+
+/*	Sequental added/changed/depricated directives.
+	Cut the space between them by half, without compromising the margin after the set. */
+.versionadded+.versionadded>p:first-child,
+.versionadded+.versionchanged>p:first-child,
+.versionadded+.depricated>p:first-child,
+.versionadded+.versionremoved>p:first-child,
+.versionchanged+.versionadded>p:first-child,
+.versionchanged+.versionchanged>p:first-child,
+.versionchanged+.depricated>p:first-child,
+.versionchanged+.versionremoved>p:first-child,
+.depricated+.versionadded>p:first-child,
+.depricated+.versionchanged>p:first-child,
+.depricated+.depricated>p:first-child,
+.depricated+.versionremoved>p:first-child,
+.versionremoved+.versionadded>p:first-child,
+.versionremoved+.versionchanged>p:first-child,
+.versionremoved+.depricated>p:first-child,
+.versionremoved+.versionremoved>p:first-child{
+	margin-top: -12px;
+}
